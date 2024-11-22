@@ -1,48 +1,3 @@
-<?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "resgistro_usuraio";
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-$mensaje = "";
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recibir datos del formulario
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $fecha = $_POST['fecha'];
-    $hora = $_POST['hora'];
-
-    // Convertir fecha
-    $fecha_convertida = DateTime::createFromFormat('d/m/Y', $fecha)->format('Y-m-d');
-
-    // Insertar datos del cliente
-    $insertarDatos = "INSERT INTO datos (nombre, apellido, email, phone) VALUES ('$nombre', '$apellido', '$email', '$phone')";
-    $ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
-
-    if ($ejecutarInsertar) {
-        $id_cliente = mysqli_insert_id($enlace);  // Obtener ID del cliente
-
-        // Verificar disponibilidad del turno
-        $consultaTurno = "SELECT * FROM turnos WHERE fecha = '$fecha_convertida' AND hora = '$hora' AND estado = 'disponible'";
-        $resultadoTurno = mysqli_query($enlace, $consultaTurno);
-
-        if (mysqli_num_rows($resultadoTurno) > 0) {
-            // Reservar el turno
-            $reservarTurno = "UPDATE turnos SET estado = 'reservado', id_cliente = '$id_cliente' WHERE fecha = '$fecha_convertida' AND hora = '$hora'";
-            $ejecutarReserva = mysqli_query($enlace, $reservarTurno);
-            
-            $mensaje = $ejecutarReserva ? "Turno reservado exitosamente." : "Error al reservar el turno.";
-        } else {
-            $mensaje = "No hay turnos disponibles.";
-        }
-    } else {
-        $mensaje = "Error al registrar los datos: " . mysqli_error($enlace);
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -124,9 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             );
         };
 
-        <?php if ($mensaje): ?>
-            alertify.success('<?php echo $mensaje; ?>');
-        <?php endif; ?>
     </script>
 </body>
 </html>
