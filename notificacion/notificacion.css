@@ -1,0 +1,38 @@
+.container-fluid{
+    background-color: #ccc8;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.Dni{
+    margin-top: 80px;
+}
+.text-body-secondary{
+    margin-top: -5px;
+}
+#turno{
+    width: 10px;
+    height: 20;
+}
+.d-flex{
+    /* Tus estilos aquí */
+    padding: 15px;
+}
+.align-items-center, .text-bg-primary, .border-0{
+    background-color: #03f4;
+    border-radius: 5px;
+}
+
+svg#adv {
+    /* Asegúrate de cambiar los valores de top y left según las necesidades específicas de tu diseño */
+    position: absolute;
+    top: 40px; /* Cambiar a la altura que necesites */
+    left: 0;
+
+}
+svg#adv {
+    
+    /* ... */
+    left: 50%;
+    transform: translateX(-50%);
+}

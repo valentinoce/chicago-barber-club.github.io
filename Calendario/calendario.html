@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="C:\xampp\htdocs\curso\index\formulario.css">
+    <link rel="stylesheet" href="C:\xampp\htdocs\curso\index\styles.css">
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+      body{
+        background-color: #ccc6;
+      }
+
+      h2{
+        margin: 20px;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+    <h2>Selecciona una fecha y hora</h2>
+    <div class="form-group text-center">
+    <input type="text" id="datepicker" class="form-control mx-auto" placeholder="fecha" required>
+    </div>
+    
+    <div class="form-group text-center">
+      <select id="hora" class="form-control mx-auto" required>
+        <option value="">-- Selecciona una hora --</option>
+        <option value="09:00">09:00</option>
+        <option value="10:00">10:00</option>
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+      </select>
+      <input type="submit" name="enviar" id="enviar" 
+      class="formulario_input, form_text, formulario" style="margin: 14px; width: 15em; padding: 10px;">
+
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Activar Datepicker -->
+  <script>
+    $(function() {
+      $("#datepicker").datepicker({
+        dateFormat: "dd/mm/yy", // Formato de la fecha
+        changeMonth: true,      // Permite cambiar el mes
+        changeYear: true,       // Permite cambiar el año
+        showAnim: "slideDown"   // Animación al abrir el calendario
+      });
+    });
+  </script>      
+</body>
+</html>

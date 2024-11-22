@@ -1,0 +1,13 @@
+/* styles.css o el archivo CSS correspondiente */
+label {
+    width: 150px; /* Ajusta el ancho del label */
+    display: inline-block; /* Para que el ancho tenga efecto */
+}  
+#datepicker {
+        width: 230px; /* Ajusta el ancho del campo de fecha */
+}
+#hora{
+    width: 230px; /* Ajusta el ancho del label */
+
+}
+

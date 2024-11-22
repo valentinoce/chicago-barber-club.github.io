@@ -1,0 +1,40 @@
+#Infp {
+    text-align: center;
+}
+
+form {
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    width: 100%;
+}
+
+.form_text {
+    text-align: center;
+    color: #000;
+}
+
+.formulario {
+    justify-content: center;
+}
+
+.formulario_input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+input {
+    border-radius: 30px;
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-left: 5px solid #00f3;
+    width: 100%;
+}
+#enviar {
+    background-color: #fff;
+}

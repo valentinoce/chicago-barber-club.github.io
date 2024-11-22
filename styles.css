@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 80px;
+    color: #000;
+    text-align: center;
+    margin: 20px 0; /* Espaciado alrededor del título */
+    font-family: "Sedgwick Ave", serif; /* Fuente por defecto */
+
+}
+p {
+    text-align: justify;
+}
+nav{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 15px;
+}
+#alineado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permitir que los enlaces se envuelvan */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+
+    }
+    a {
+        font-size: 20px; /* Tamaño de fuente más pequeño para enlaces */
+    }
+    .formulario_input {
+        width: 90%; /* Hacer el formulario más ancho en pantallas pequeñas */
+    }
+}
+    
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px; /* Tamaño de fuente aún más pequeño */
+        
+    }
+    a {
+        font-size: 18px; /* Tamaño de fuente más pequeño para enlaces */
+    }
+}
