@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Turno</title>
+    <link rel="stylesheet" href="alertas.js">
+    <link rel="stylesheet" href="botton.css">
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="formulario2.css">
+    <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light" style="display: flex; text-align: center; justify-content: center;">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <form action="verificacion_turno.php" method="post" class="formulario">
+        <p class="form_text">Ingresa el Email para Saber tu día y horario</p>
+        <input type="email" name="email" id="email" required placeholder="Ingresa tu correo">
+        <input type="submit" name="enviar" id="enviar">
+    </form>
+</body>
+</html>
