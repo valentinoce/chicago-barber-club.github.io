@@ -26,9 +26,37 @@ form {
 
 input {
     border-radius: 30px;
-    margin: 15px 0; /* Añade espacio entre los campos */
-    padding: 10px;
+    margin: 10px 0; /* Reduce el margen entre los campos */
+    padding: 12px; /* Aumenta el tamaño del campo de entrada */
     border: none;
     border-left: 5px solid #00f3;
     width: 80%; /* Ajusta el tamaño de los inputs */
+    box-sizing: border-box; /* Asegura que el padding no se sume al ancho total */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    form {
+        width: 80%; /* Aumenta el ancho del formulario en pantallas medianas */
+        margin: 40px;
+    }
+
+    input {
+        width: 100%; /* Aumenta el ancho de los inputs para que se adapten al contenedor */
+        padding: 18px; /* Aumenta el padding de los inputs */
+        font-size: 16px; /* Aumenta el tamaño de la fuente dentro del input */
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 90%; /* Hace el formulario aún más ancho en pantallas pequeñas */
+        
+    }
+
+    input {
+        width: 100%; /* Aumenta al 100% el tamaño de los inputs en pantallas muy pequeñas */
+        padding: 20px; /* Aumenta el tamaño de los inputs */
+        font-size: 18px; /* Aumenta el tamaño de la fuente dentro del input */
+    }
 }
